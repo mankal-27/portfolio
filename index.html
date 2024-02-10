@@ -1,36 +1,70 @@
-<!-- TODO 1: Create the HTML Boilerplate -->
-
-<!-- TODO 2: Add Your previous projects' HTML into the public folder -->
-
-<!-- TODO 3: Take screenshots of your project previews and add the images to the images folder -->
-
-<!-- TODO 4: Add titles/subtitles etc. -->
-
-<!-- TODO 5: Add a link to the project pages -->
-
-<!-- TODO 6: Add images to show the project previews
-HINT for TODO 6: You can use the height attribute set to 200 to make the image smaller:
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
-
-<!-- TODO 7: Add the Contact Me and About Me page links -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Manjunath Kalkutagi's Portfolio</title>
+    <link rel="stylesheet" href="./css/mainStyle.css">
 </head>
 <body>
-    <h1>Manjunath Kalkutagi's Portfolio</h1>
-    <h2>I'm a Web Developer</h2>
-    <hr />
-    <h3><a href="./public/myResume.html">Link For My Resume</a></h3>
-    <h3><a href="./public/movie-ranking.html">Movie Ranking Project</a></h3>
-    <img src="./assets/images/movies.png" height="200" alt="movie ranking project preview"/>
-    <h3><a href="./public/birthday-invite.html">Birthday Invite Project</a></h3>
-    <img src="./assets/images/Birthday.png" height="200" alt="birthday invite project preview"/>
-    <hr />
-    <a href="./public/about.html">About Me</a>
-    <a href="./public/contact.html">Contact Me</a>
+    <header>
+        <div class="header-container">
+            <a href="index.html">
+                <img src="./assets/images/MyImage.jpg" alt="Manjunath R Kalkutagi's Profile Picture" width="150" height="150">
+            </a>
+            <h1>Manjunath Kalkutagi</h1>
+            <p>
+                <a href="tel:+919972381627">+91 9972381627</a> | <a href="mailto:mnkalkutagi@gmail.com">mnkalkutagi@gmail.com</a> | Bangalore, Karnataka
+            </p>
+        </div>
+    </header>
+    <main>
+        <section class="about-me">
+            <h2>About Me</h2>
+            <p>I'm a seasoned and passionate Back-End Developer with over 3 years of experience crafting robust and innovative solutions. I am proficient in Node.js, React, MongoDB, and Elasticsearch, and I thrive on tackling complex challenges and contributing to meaningful projects.</p>
+            <p>Beyond coding, I'm an avid learner and problem-solver, constantly seeking new knowledge and perspectives. I believe in open communication, collaboration, and delivering high-quality results efficiently.</p>
+            <p>In my free time, I enjoy exploring new technologies, staying active, and spending quality time with family and friends.</p>
+        </section>
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Development:** JavaScript, Python, Node.js, Express.js, React</li>
+                <li><strong>Databases:** MySQL, MongoDB, Elasticsearch</li>
+                <li><strong>Other:** Linux, GIT, API Integration, Data Analysis, Problem-Solving</li>
+            </ul>
+        </section>
+        <section class="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <a href="./public/movie-ranking.html">
+                        <h3>Movie Ranking</h3>
+                        <p>Developed a web application to rank movies based on critic and audience ratings, using data analysis and visualizations.</p>
+                        <img src="./assets/images/movies.png" alt="Movie Ranking Project Preview" height="200">
+                    </a>
+                </li>
+                <li>
+                    <a href="./public/birthday-invite.html">
+                        <h3>Birthday Invite</h3>
+                        <p>Designed and built a custom birthday invitation website using web technologies, offering interactive features and personalization.</p>
+                        <img src="./assets/images/Birthday.png" alt="Birthday Invite Project Preview" height="200">
+                    </a>
+                </li>
+                </ul>
+        </section>
+        <section class="resume-contact">
+            <h2>Resume & Contact</h2>
+            <a href="./public/myResume.html" target="_blank">Resume Link</a>
+            <br>
+            <p>Download my resume to learn more about my experience and qualifications:</p>
+            <a href="./assets/Manjunath_R_K.pdf" target="_blank" rel="noopener">Download Resume as PDF</a>
+            <p>Get in touch to discuss potential projects or collaborations:</p>
+            <a href="mailto:mnkalkutagi@gmail.com">Contact Me</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Manjunath Kalkutagi. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
 </body>
 </html>
