@@ -1,0 +1,52 @@
+/* Global styles */
+body {
+    font-family: sans-serif; /* Choose a readable font */
+    margin: 20px; /* Add some margin around the content */
+    color: #333; /* Set a default text color */
+  }
+  
+  h1, h2, h3 {
+    margin: 10px 0; /* Adjust spacing between headings */
+    font-weight: bold; /* Make headings stand out */
+  }
+  
+  p {
+    line-height: 1.5; /* Improve readability */
+  }
+  
+  ul, ol {
+    padding-left: 20px; /* Indent lists */
+  }
+  
+  a {
+    color: #007bff; /* Set a default link color */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  a:hover {
+    color: #005ca5; /* Change link color on hover */
+  }
+  
+  /* Header styles */
+  header {
+    text-align: center; /* Center header content */
+  }
+  
+  header img {
+    border-radius: 50%; /* Make profile image circular */
+    margin: 10px auto; /* Add margin around the image */
+  }
+  
+  /* Section styles */
+  section {
+    margin-bottom: 20px; /* Add space between sections */
+  }
+  
+  /* Footer styles */
+  footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Add more styles as needed */
+  
