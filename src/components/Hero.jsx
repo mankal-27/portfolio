@@ -12,11 +12,12 @@ const Hero = () => {
                 Backend Developer | Frontend Developer | Automation | OSS Enthu
             </h2>
             <div className="flex gap-4">
-                <a 
-                    href={`${import.meta.env.BASE_URL}Manjunath_R_K.pdf`}
-                    download
+                <a
+                    href="https://mankal-27.github.io/portfolio/Manjunath_R_K.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg"
-                >
+>
                     Download Resume
                 </a>
                 <a
