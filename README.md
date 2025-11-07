@@ -7,8 +7,7 @@ Deployed using **GitHub Pages**.
 
 ## 🚀 Live Demo
 
-🔗 **[View Portfolio](https://YOUR_GITHUB_USERNAME.github.io/portfolio)**
-*(Replace the link with your actual GitHub Pages URL once deployed.)*
+🔗 **[View Portfolio](https://mankal-27.github.io/portfolio)**
 
 ---
 
@@ -109,8 +108,8 @@ npm run preview
 
 **Manjunath Kalkutagi**
 📧 [mnkalkutagi@gmail.com](mailto:mnkalkutagi@gmail.com)
-🌍 [LinkedIn](https://www.linkedin.com/in/YOUR_LINKEDIN)
-💻 [GitHub](https://github.com/YOUR_GITHUB_USERNAME)
+🌍 [LinkedIn](https://www.linkedin.com/in/mkalkutagi)
+💻 [GitHub](https://github.com/mankal-27)
 
 ---
 
