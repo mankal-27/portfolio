@@ -24,7 +24,7 @@ const Contact = () => {
       return;
     }
 
-    setStatus("✅ Message sent successfully! (Demo only)");
+    setStatus("✅ Message sent successfully! I'll get back to you soon.");
     setFormData({ name: "", email: "", message: "" });
   };
 
