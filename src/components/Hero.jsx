@@ -13,7 +13,7 @@ const Hero = () => {
             </h2>
             <div className="flex gap-4">
                 <a 
-                    href="/Manjunath_R_K.pdf"
+                    href={`${import.meta.env.BASE_URL}Manjunath_R_K.pdf`}
                     download
                     className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg"
                 >
