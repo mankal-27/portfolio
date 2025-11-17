@@ -55,24 +55,24 @@ automation, and performance optimization to deliver seamless user experiences.
       description:
         "Automated inactive lead cleanup, reporting, and CSV exports using Node.js, MongoDB, and cron jobs. Increased efficiency by 40%.",
       tech: ["Node.js", "MongoDB", "Elasticsearch", "AWS S3"],
-      github: "https://github.com/yourusername/lead-automation",
-      live: "",
+      github: "",
+      live: "https://vymo.com/",
     },
     {
-      title: "Financial Data Visualization Dashboard",
+      title: "Expense Analyzer — Smart CSV-Based Financial Dashboard",
       description:
-        "A React-based dashboard that visualizes market data with dynamic APIs and chart integrations.",
+        "A React-based dashboard modern, privacy-friendly bank statement analyzer.",
       tech: ["React", "Chart.js", "TailwindCSS"],
-      github: "https://github.com/yourusername/finance-dashboard",
-      live: "https://yourusername.github.io/finance-dashboard/",
+      github: "https://github.com/mankal-27/expense-analyzer",
+      live: "https://mankal-27.github.io/expense-analyzer/",
     },
     {
       title: "Portfolio Website",
       description:
-        "Your own portfolio built with React and Tailwind — this one!",
+        "My Own portfolio built with React and Tailwind — this one!",
       tech: ["React", "TailwindCSS", "Vite"],
-      github: "https://github.com/yourusername/portfolio",
-      live: "https://yourusername.github.io/portfolio/",
+      github: "https://github.com/mankal-27/portfolio",
+      live: "https://mankal-27.github.io/portfolio/",
     },
   ];
   return (
