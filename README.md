@@ -130,7 +130,7 @@ Building this portfolio helped strengthen:
 * 🌓 Dark/light mode toggle
 * ✨ Add Framer Motion animations
 * 🧠 SEO optimization (meta tags, OG images)
-* 📊 Add analytics (Google Analytics or Umami)
+* 📊 Add analytics (Google Analytics or Umami).
 
 ---
 
