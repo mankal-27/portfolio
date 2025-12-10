@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -8,6 +10,7 @@ const Contact = () => {
   });
 
   const [status, setStatus] = useState("");
+  const [isSending, setIsSending] = useState(false);
 
   // handle input change
   const handleChange = (e) => {
@@ -24,8 +27,31 @@ const Contact = () => {
       return;
     }
 
-    setStatus("✅ Message sent successfully! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    setIsSending(true);
+    setStatus("Sending message... ⏳");
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          setStatus("✅ Message sent successfully! I'll get back to you soon.");
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          console.error("FAILED...", error.text);
+          setStatus("❌ Failed to send message. Please try again later.");
+        }
+      )
+      .finally(() => {
+        setIsSending(false);
+      });
   };
 
   return (
@@ -41,6 +67,7 @@ const Contact = () => {
       </div>
 
       <form
+        ref={form}
         onSubmit={handleSubmit}
         className="max-w-xl mx-auto flex flex-col gap-4 bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700"
       >
@@ -73,9 +100,11 @@ const Contact = () => {
 
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md transition-all duration-300"
+          disabled={isSending}
+          className={`bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md transition-all duration-300 ${isSending ? "opacity-50 cursor-not-allowed" : ""
+            }`}
         >
-          Send Message
+          {isSending ? "Sending..." : "Send Message"}
         </button>
 
         {status && (
