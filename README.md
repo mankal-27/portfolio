@@ -16,7 +16,7 @@ Deployed using **GitHub Pages**.
 * ⚛️ **React** (Vite)
 * 🎨 **Tailwind CSS** for styling
 * 📦 **gh-pages** for deployment
-* 💌 **Web3Forms** for contact form integration
+* 💌 **EmailJS** for contact form integration
 * ☁️ **GitHub Pages** for hosting
 
 ---

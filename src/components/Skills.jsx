@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import SkillBadge from "./SkillBadge";
 import {
   FaReact,
@@ -91,30 +92,49 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="bg-gray-950 text-gray-100 py-20 px-6">
-      <h2 className="text-4xl font-bold text-center mb-10 text-blue-400">
-        Skills
-      </h2>
+    <section id="skills" className="bg-transparent text-slate-100 py-24 px-6 relative z-10">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-6xl mx-auto"
+      >
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-slate-100">
+          Technical <span className="text-gradient">Arsenal</span>
+        </h2>
 
-      <div className="max-w-6xl mx-auto space-y-10">
-        {skillGroups.map((group, index) => (
-          <div key={index}>
-            <h3 className="text-2xl font-semibold mb-4 text-gray-300">
-              {group.title}
-            </h3>
-            <div className="flex flex-wrap gap-4">
-              {group.skills.map((skill, i) => (
-                <SkillBadge
-                  key={i}
-                  icon={skill.icon}
-                  label={skill.label}
-                  color={skill.color}
-                />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skillGroups.map((group, index) => (
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="glass-card p-8 rounded-2xl relative overflow-hidden group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold mb-6 text-slate-200 border-b border-white/10 pb-3 inline-block">
+                  {group.title}
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {group.skills.map((skill, i) => (
+                    <SkillBadge
+                      key={i}
+                      icon={skill.icon}
+                      label={skill.label}
+                      color={skill.color}
+                      index={i}
+                    />
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 };
