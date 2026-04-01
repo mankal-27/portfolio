@@ -71,25 +71,39 @@ const Contact = () => {
         onSubmit={handleSubmit}
         className="max-w-xl mx-auto flex flex-col gap-4 bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700"
       >
+        <label className="sr-only" htmlFor="contact-name">
+          Name
+        </label>
         <input
+          id="contact-name"
           type="text"
           name="name"
           placeholder="Your Name"
+          autoComplete="name"
           value={formData.name}
           onChange={handleChange}
           className="px-4 py-2 rounded-md bg-gray-900 text-gray-100 border border-gray-700 focus:border-blue-400 outline-none"
         />
 
+        <label className="sr-only" htmlFor="contact-email">
+          Email
+        </label>
         <input
+          id="contact-email"
           type="email"
           name="email"
           placeholder="Your Email"
+          autoComplete="email"
           value={formData.email}
           onChange={handleChange}
           className="px-4 py-2 rounded-md bg-gray-900 text-gray-100 border border-gray-700 focus:border-blue-400 outline-none"
         />
 
+        <label className="sr-only" htmlFor="contact-message">
+          Message
+        </label>
         <textarea
+          id="contact-message"
           name="message"
           placeholder="Your Message"
           rows="5"
@@ -108,7 +122,9 @@ const Contact = () => {
         </button>
 
         {status && (
-          <p className="text-center text-sm text-gray-400 mt-2">{status}</p>
+          <p className="text-center text-sm text-gray-400 mt-2" role="status" aria-live="polite">
+            {status}
+          </p>
         )}
       </form>
     </section>

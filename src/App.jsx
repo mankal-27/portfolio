@@ -59,6 +59,31 @@ automation, and performance optimization to deliver seamless user experiences.
       live: "https://vymo.com/",
     },
     {
+      title: "High-Speed Snippet Search Engine (MVP)",
+      description:
+        "A high-performance search API designed for sub-millisecond text retrieval and data indexing. Key Focus: Advanced data indexing and complex query optimization.",
+      tech: ["Node.js", "PostgreSQL", "Elasticsearch", "Docker"],
+      github: "https://github.com/mankal-27/snippet-search-mvp",
+      live: "https://www.npmjs.com/package/dev-snip-cli",
+    },
+    {
+      title: "🍽️ Distributed Table Reservation System",
+      description:
+        "An enterprise-grade, event-driven microservices architecture built to handle restaurant reservations, billing, and user notifications.",
+      tech: [
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "Elasticsearch",
+        "Prisma",
+        "RabbitMQ",
+        "Docker",
+        "Passport.js",
+      ],
+      github: "https://github.com/mankal-27/table-reservation-system",
+      live: "",
+    },
+    {
       title: "Expense Analyzer — Smart CSV-Based Financial Dashboard",
       description:
         "A React-based dashboard modern, privacy-friendly bank statement analyzer.",
@@ -76,7 +101,7 @@ automation, and performance optimization to deliver seamless user experiences.
     },
   ];
   return (
-    <div className="font-sans scroll-smooth">
+    <div className="font-sans bg-glow min-h-screen text-slate-200 scroll-smooth">
       <Hero />
       <About title="About Me" description={aboutText} />
       <Experience experiences={experiences} />
