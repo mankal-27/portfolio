@@ -101,7 +101,7 @@ automation, and performance optimization to deliver seamless user experiences.
     },
   ];
   return (
-    <div className="font-sans bg-glow min-h-screen text-slate-200 scroll-smooth">
+    <div className="font-sans bg-glow min-h-screen text-slate-200 scroll-smooth overflow-x-hidden">
       <Hero />
       <About title="About Me" description={aboutText} />
       <Experience experiences={experiences} />
